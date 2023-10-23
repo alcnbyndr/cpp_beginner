@@ -5,6 +5,14 @@ class Gun {
     public:
         std::string name;
         int bulletCapacity;
+
+        Gun() {
+            std::cout << "Gun is constructed.\n";
+        }
+
+        ~Gun(){
+            std::cout << "Gun is destructed.\n";
+        }
 };
 
 class Ak47 : public Gun {
@@ -12,6 +20,14 @@ class Ak47 : public Gun {
         bool rapidSingle;
         int strapLength;
         bool binoculars;
+
+        Ak47() {
+            std::cout << "Ak47 is constructed.\n";
+        }
+
+        ~Ak47() {
+            std::cout << "Ak47 is destructed.\n";
+        }
 
         void fire(){
             std::cout << "Shot by AK47!\n";
